@@ -32,6 +32,9 @@ import galery3 from "./assets/images/galery-3.jpg";
 import galery4 from "./assets/images/galery-4.jpg";
 import galery5 from "./assets/images/galery-5.jpg";
 import galery6 from "./assets/images/galery-6.jpg";
+import bankBca from "./assets/images/bankBca.png";
+import bankBsi from "./assets/images/bankBsi.png";
+import bankMandiri from "./assets/images/bankMandiri.png";
 
 export const config = {
   backgroundMusic: backgroundMusic,
@@ -39,9 +42,10 @@ export const config = {
     man: {
       fullName: "Ridho Imantiyar, S.Kom",
       name: "Ridho",
+      cardName: "RIDHO IMANTIYAR",
       desc: (
         <>
-          Putra kedua dari Bapak Badri, S.Kep, Ns <br />
+          Putra kedua dari Bapak Badri, S.Kep., Ns <br />
           dan Ibu Husnawati, S.Pd.I
         </>
       ),
@@ -51,9 +55,10 @@ export const config = {
     woman: {
       fullName: "Seila Tazkiyah, S.Kom",
       name: "Seila",
+      cardName: "SEILA TAZKIYAH",
       desc: (
         <>
-          Putri kedua dari Bapak Ir. Dul Kalim <br />
+          Putri kedua dari Bapak Ir. Dul Kalim<br />
           dan Ibu Nina Octari
         </>
       ),
@@ -64,7 +69,7 @@ export const config = {
   greeting: {
     title: "Assalamu'alaikum Wr.Wb.",
     content:
-      "Tanpa mengurangi rasa hormat, kami bermaksud mengundang Bapak/ Ibu/ Saudara/ I pada acara resepsi pernikahan kami.",
+      "Tanpa mengurangi rasa hormat, kami bermaksud mengundang Bapak/ Ibu/ Saudara/i pada acara resepsi pernikahan kami.",
   },
   quote: {
     title: "Q.S. Ar Rum: 21",
@@ -83,7 +88,7 @@ export const config = {
       title: "Resepsi Seila & Ridho",
       detail: "Acara Resepsi Pernikahan Seila & Ridho",
       startDate: "2024-12-28 13:00",
-      endDate: "2024-12-28 16:00",
+      endDate: "2024-12-28 17:00",
       location: "Andaliman Hall, Jl. Abdullah Lubis No.79/101, Merdeka, Kec. Medan Baru, Kota Medan, Sumatera Utara 20153",
     },
   },
@@ -114,7 +119,7 @@ export const config = {
       Para tamu undangan dipersilahkan makan dan dapat berfoto bersama di
       pelaminan <br />
       <br />
-      16:00 - Acara Selesai
+      17:00 - Acara Selesai
     </>
   ),
   doa: (
@@ -132,9 +137,19 @@ export const config = {
         Namun jika Anda ingin memberikan hadiah kami sediakan fitur berikut:
       </>
     ),
+    cardImage: [bankBca, bankBsi, bankMandiri],
+    bsiNo : "7121417787",
+    bcaNo : "3630160021",
+    mandiriNo : "1370016160745",
+    alamat : {
+      reciveName: "Anggi/Iqbal",
+      reciveNumber: "+62 877-8857-6061",
+      reciveAddress: "Jln. RAYA CILANDAK, RT002 RW003,(depan material adiwijaya rokman rumah cat warna kuning), KAB. INDRAMAYU, ANJATAN, JAWA BARAT, ID, 45256",
+    }
   },
-  thankYou: (
-    <>
+  thankYou: {
+    desc1 : (
+      <>
       Merupakan suatu kebahagiaan dan kehormatan bagi kami, bila
       Bapak/Ibu/Saudara/i, berkenan hadir dan memberikan doa restu kepada kedua
       mempelai.
@@ -142,7 +157,20 @@ export const config = {
       <br />
       Hormat kami yang berbahagia
     </>
-  ),
+    ),
+    womanFamily : (
+      <>
+      <br />
+      Keluarga Bapak Ir. Dul Kalim & Ibu Nina Octari
+      </>
+    ),
+    manFamily : (
+      <>
+      <br />
+      Keluarga Bapak Badri, S.Kep., Ns & Ibu Husnawati, S.Pd.I
+      </>
+    )
+  },
   sliderList: [
     {
       label: "Opening",

@@ -1,6 +1,7 @@
 import * as Dialog from "@radix-ui/react-dialog";
 import XIcon from "../../assets/icons/x-icon.svg?react";
 import classNames from "./modal-angpao.module.scss";
+import { config } from "../../config";
 
 const ModalAngpao = () => (
   <Dialog.Root>
@@ -13,7 +14,34 @@ const ModalAngpao = () => (
         <Dialog.Title className={classNames.DialogTitle}>
           Kirim Angpao
         </Dialog.Title>
-        <div className={classNames.content}>angpao</div>
+        <br />
+        <div className={classNames.content}>
+          <div className={classNames.card}>
+            <img src={config.gift.cardImage[2]} alt="" />
+            <div className={classNames.desc}>
+              <>{config.bride.woman.cardName}</>
+              <br />
+              <>{config.gift.mandiriNo}</>
+            </div>
+          </div>
+          <div className={classNames.card}>
+            <img src={config.gift.cardImage[0]} alt="" />
+            <div className={classNames.desc}>
+              <>{config.bride.man.cardName}</>
+              <br />
+              <>{config.gift.bcaNo}</>
+            </div>
+            
+          </div>
+          <div className={classNames.card}>
+            <img src={config.gift.cardImage[1]} alt="" />
+            <div className={classNames.desc}>
+              <>{config.bride.man.cardName}</>
+              <br />
+              <>{config.gift.bsiNo}</>
+            </div>
+          </div>
+          </div>
         <Dialog.Close asChild>
           <button className={classNames.IconButton} aria-label="Close">
             <XIcon />
