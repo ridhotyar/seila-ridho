@@ -40,7 +40,7 @@ const BrideSlider: FC<Props> = (props) => {
             onClick={() => window.open(config.bride.woman.instagram, "_blank")}
           >
             <Instagram />
-            selatazkiyah
+            seilatz
           </motion.button>
           <div className={classNames.photoWrapper}>
             <motion.div

@@ -57,7 +57,7 @@ export const config = {
           dan Ibu Nina Octari
         </>
       ),
-      instagram: "https://www.instagram.com/selatazkiyah/",
+      instagram: "https://www.instagram.com/seilatz/",
       photo: womanPhoto,
     },
   },
