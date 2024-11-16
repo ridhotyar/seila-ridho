@@ -1,0 +1,19 @@
+$width: 160px;
+
+.main {
+  position: relative;
+  .frame {
+    position: absolute;
+    width: $width;
+    left: 0;
+    z-index: 1;
+  }
+  .img {
+    width: $width;
+    aspect-ratio: 7/8;
+    border-radius: 150px;
+    scale: 0.9;
+    object-fit: cover;
+    object-position: center;
+  }
+}

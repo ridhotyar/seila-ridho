@@ -1,0 +1,101 @@
+.button {
+  border-radius: 15px;
+  background-color: #665a35cc;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 8px 17px;
+  border: 1px solid #fff;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    background-color: #665a35;
+  }
+}
+
+.DialogOverlay {
+  background-color: #000000dd;
+  position: fixed;
+  inset: 0;
+  animation: overlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.DialogContent {
+  border: 3px solid #c3b899;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: hsl(206 22% 7% / 35%) 0px 10px 38px -10px,
+    hsl(206 22% 7% / 20%) 0px 10px 20px -15px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  max-width: 450px;
+  max-height: 85vh;
+  padding: 25px;
+  animation: contentShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.DialogContent:focus {
+  outline: none;
+}
+
+.DialogTitle {
+  font-family: "Ms Madi", cursive;
+  font-size: 30px;
+  font-weight: 500;
+  color: #665a35;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.DialogDescription {
+  margin: 10px 0 20px;
+  color: var(--mauve-11);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.IconButton {
+  font-family: inherit;
+  border-radius: 100%;
+  height: 28px;
+  width: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #665a35;
+  background-color: transparent;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  outline: none;
+  border: none;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes overlayShow {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes contentShow {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -48%) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}

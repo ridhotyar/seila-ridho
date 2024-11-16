@@ -1,0 +1,72 @@
+.main {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+.bgImg {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  object-fit: cover;
+  left: 0;
+  top: 0;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  color: rgb(71, 63, 37);
+  .name {
+    font-family: "Ms Madi", cursive;
+    font-size: 40px;
+    font-weight: 500;
+    margin: 0;
+    line-height: 1;
+  }
+  .desc {
+    font-family: "Arima", system-ui;
+    font-weight: 400;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    margin: 0;
+    margin-top: 10px;
+    max-width: 350px;
+    text-align: center;
+  }
+  .photoWrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+  }
+  .button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border-radius: 15px;
+    background-color: #665a35cc;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 400;
+    padding: 5px 10px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    &:hover {
+      background-color: #665a35;
+    }
+    > svg {
+      width: 10px;
+    }
+  }
+}

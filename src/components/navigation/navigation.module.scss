@@ -1,0 +1,55 @@
+.main {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  align-items: center;
+  left: 0;
+  bottom: 0;
+  position: fixed;
+  box-sizing: border-box;
+  overflow: hidden;
+  z-index: 10;
+  .content {
+    background-color: #fff;
+    width: 451px;
+    @media screen and (max-width: 450px) {
+      width: 100vw;
+    }
+    .item {
+      font-family: "Inter", sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      padding: 10px;
+      gap: 5px;
+      .label {
+        font-size: 13px;
+        font-weight: 400;
+        color: #c5a983;
+        margin: 0;
+        min-width: max-content;
+        transition: all 0.3s ease-in-out;
+      }
+      .icon {
+        height: 16px;
+        width: 16px;
+        > svg {
+          fill: #c5a983;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+      &.active {
+        .label {
+          color: #4f3726;
+        }
+        .icon {
+          > svg {
+            fill: #4f3726;
+          }
+        }
+      }
+    }
+  }
+}
