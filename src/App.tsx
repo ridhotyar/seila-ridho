@@ -61,7 +61,7 @@ export default function App() {
   }, [goFull])
 
   return (
-    <div id="full">
+    <div id="">
       <motion.div
         className={classNames.main}
         initial={{ opacity: 0 }}
