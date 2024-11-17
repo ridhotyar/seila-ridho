@@ -43,22 +43,22 @@ const Thankyou: FC<Props> = (props) => {
           >
             {`${config.bride.woman.name} & ${config.bride.man.name}`}
           </motion.p>
-          <motion.p
+          {/* <motion.p
             initial={{ y: 200, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ bounce: 0, duration: 2, ease: "easeInOut" }}
             className={classNames.content}
           >
             {config.thankYou.womanFamily}
-          </motion.p>
-          <motion.p
+          </motion.p> */}
+          {/* <motion.p
             initial={{ y: 250, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ bounce: 0, duration: 2, ease: "easeInOut" }}
             className={classNames.content}
           >
             {config.thankYou.manFamily}
-          </motion.p>
+          </motion.p> */}
         </div>
       )}
     </div>

@@ -18,7 +18,7 @@ const ModalAngpao = () => (
         <div className={classNames.content}>
           <div className={classNames.card}>
             <img src={config.gift.cardImage[2]} alt="" />
-            <div className={classNames.desc}>
+            <div className={classNames.desc} onClick={ () => {navigator.clipboard.writeText(config.gift.mandiriNo)}}>
               <>{config.bride.woman.cardName}</>
               <br />
               <>{config.gift.mandiriNo}</>
@@ -26,7 +26,7 @@ const ModalAngpao = () => (
           </div>
           <div className={classNames.card}>
             <img src={config.gift.cardImage[0]} alt="" />
-            <div className={classNames.desc}>
+            <div className={classNames.desc} onClick={ () => {navigator.clipboard.writeText(config.gift.bcaNo)}}>
               <>{config.bride.man.cardName}</>
               <br />
               <>{config.gift.bcaNo}</>
@@ -35,13 +35,14 @@ const ModalAngpao = () => (
           </div>
           <div className={classNames.card}>
             <img src={config.gift.cardImage[1]} alt="" />
-            <div className={classNames.desc}>
+            <div className={classNames.desc} onClick={ () => {navigator.clipboard.writeText(config.gift.bsiNo)}}>
               <>{config.bride.man.cardName}</>
               <br />
               <>{config.gift.bsiNo}</>
             </div>
           </div>
-          </div>
+          <div className={classNames.note}> *Tap nama atau nomor untuk copy</div>
+        </div>
         <Dialog.Close asChild>
           <button className={classNames.IconButton} aria-label="Close">
             <XIcon />
