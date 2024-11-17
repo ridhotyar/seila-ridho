@@ -51,7 +51,7 @@ const ModalAngpao = () => {
           <div className={classNames.note}>{ copied==='copied' ? `Number Copied :  ${number}  ✅` : `*Tap nama atau nomor untuk copy`}</div>
         </div>
         <Dialog.Close asChild>
-          <button className={classNames.IconButton} aria-label="Close">
+          <button className={classNames.IconButton} aria-label="Close" onClick={ () => {setCopied("")}}>
             <XIcon />
           </button>
         </Dialog.Close>
