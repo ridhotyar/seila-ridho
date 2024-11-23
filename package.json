@@ -13,7 +13,7 @@
     "@radix-ui/react-dialog": "^1.1.2",
     "clsx": "^2.1.1",
     "dayjs": "^1.11.13",
-    "framer-motion": "^6.0.2",
+    "framer-motion": "^6.3.0",
     "keen-slider": "^6.8.6",
     "react": "^17.0.2",
     "react-countdown": "^2.3.6",
