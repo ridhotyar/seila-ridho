@@ -83,14 +83,14 @@ export const config = {
       detail: "Join us to celebrate the wedding of Seila and Ridho!",
       startDate: "2024-12-28 09:00",
       endDate: "2024-12-28 12:00",
-      location: "Andaliman Hall, Jl. Abdullah Lubis No.79/101, Merdeka, Kec. Medan Baru, Kota Medan, Sumatera Utara 20153",
+      location: "Andaliman Hall, Jl. Abdullah Lubis No.79/101, Kota Medan, Sumatera Utara 20153",
     },
     reception: {
       title: "Resepsi Seila & Ridho",
       detail: "Acara Resepsi Pernikahan Seila & Ridho",
       startDate: "2024-12-28 13:00",
       endDate: "2024-12-28 17:00",
-      location: "Andaliman Hall, Jl. Abdullah Lubis No.79/101, Merdeka, Kec. Medan Baru, Kota Medan, Sumatera Utara 20153",
+      location: "Andaliman Hall, Jl. Abdullah Lubis No.79/101, Kota Medan, Sumatera Utara 20153",
     },
   },
   map: {
