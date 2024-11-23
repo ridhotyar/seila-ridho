@@ -42,20 +42,20 @@ const GiftSliderIbu: FC<Props> = (props) => {
           >
 
           <div className={classNames.card}>
-            <img src={config.gift.cardImage[2]} alt="" />
-            <div className={classNames.desc} onClick={ () => {navigator.clipboard.writeText(config.gift.mandiriNoBapak);setNumber(config.gift.mandiriNoBapak);setCopied("copied")}}>
-              <>{config.gift.bapakName}</>
-              <br />
-              <>{config.gift.mandiriNoBapak}</>
-            </div>
-          </div>  
-          <div className={classNames.card}>
             <img src={config.gift.cardImage[1]} alt="" />
             <div className={classNames.desc} onClick={ () => {navigator.clipboard.writeText(config.gift.bsiNoIbu);setNumber(config.gift.bsiNoIbu);setCopied("copied")}}>
               <>{config.gift.ibuName}</>
               <br />
               <>{config.gift.bsiNoIbu}</>
             </div>
+          </div>  
+          <div className={classNames.card}>
+            <img src={config.gift.cardImage[2]} alt="" />
+              <div className={classNames.desc} onClick={ () => {navigator.clipboard.writeText(config.gift.mandiriNo);setNumber(config.bride.woman.cardName);setCopied("copied")}}>
+                <>{config.bride.woman.cardName}</>
+                <br />
+                <>{config.gift.mandiriNo}</>
+              </div>
           </div>
           <div className={classNames.note}>{ copied==='copied' ? `Number Copied :  ${number}  ✅` : `*Tap nama atau nomor untuk copy`}</div>
           </motion.div>
