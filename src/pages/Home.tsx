@@ -77,7 +77,7 @@ export default function  Home() {
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
-        <AnimatePresence mode="wait">
+        <AnimatePresence >
           {isLoadingAssets && (
             <motion.div
               initial={{ opacity: 1 }}
