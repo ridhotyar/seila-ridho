@@ -23,6 +23,7 @@ import {
   GalerySlider,
   ThankyouSlider,
   GiftSlider,
+  GiftSliderIbu
 } from "./components/sliders";
 import manPhoto from "./assets/images/man.jpg";
 import womanPhoto from "./assets/images/woman.jpg";
@@ -137,8 +138,19 @@ export const config = {
         Namun jika Anda ingin memberikan hadiah kami sediakan fitur berikut:
       </>
     ),
+    contentIbu: (
+      <>
+        Doa Restu Anda merupakan karunia yang sangat berarti bagi kami. <br />
+        <br />
+        Namun jika Anda ingin memberikan hadiah kami sediakan nomor rekening berikut:
+      </>
+    ),
     cardImage: [bankBca, bankBsi, bankMandiri],
     bsiNo : "7121417787",
+    bsiNoIbu : "7129798167",
+    ibuName : "NINA OCTARI",
+    bapakName : "DUL KALIM",
+    mandiriNoBapak : "123123123",
     bcaNo : "3630160021",
     mandiriNo : "1370016160745",
     alamat : {
@@ -233,4 +245,129 @@ export const config = {
       component: ThankyouSlider,
     },
   ],
+  sliderListIbu: [
+    {
+      label: "Opening",
+      icon: <Opening />,
+      component: OpeningSlider,
+    },
+    {
+      label: "Salam",
+      icon: <Salam />,
+      component: GreetingSlider,
+    },
+    {
+      label: "Quote",
+      icon: <Quote />,
+      component: QuoteSlider,
+    },
+    {
+      label: "Mempelai",
+      icon: <Mempelai />,
+      component: BrideSlider,
+    },
+    {
+      label: "Akad",
+      icon: <Acara />,
+      component: AkadSlider,
+    },
+    {
+      label: "Resepsi",
+      icon: <Acara />,
+      component: ReceptionSlider,
+    },
+    {
+      label: "Lokasi",
+      icon: <Map />,
+      component: MapSlider,
+    },
+    {
+      label: "Galeri",
+      icon: <Galery />,
+      component: GalerySlider,
+    },
+    {
+      label: "Rundown Acara",
+      icon: <RundownAcara />,
+      component: RundownSlider,
+    },
+    {
+      label: "Doa",
+      icon: <Doa />,
+      component: DoaSlider,
+    },
+    {
+      label: "Gift",
+      icon: <Gift />,
+      component: GiftSliderIbu,
+    },
+    {
+      label: "Terimakasih",
+      icon: <Terimakasih />,
+      component: ThankyouSlider,
+    },
+  ],
+  sliderListRidho: [
+    {
+      label: "Opening",
+      icon: <Opening />,
+      component: OpeningSlider,
+    },
+    {
+      label: "Salam",
+      icon: <Salam />,
+      component: GreetingSlider,
+    },
+    {
+      label: "Quote",
+      icon: <Quote />,
+      component: QuoteSlider,
+    },
+    {
+      label: "Mempelai",
+      icon: <Mempelai />,
+      component: BrideSlider,
+    },
+    {
+      label: "Akad",
+      icon: <Acara />,
+      component: AkadSlider,
+    },
+    {
+      label: "Resepsi",
+      icon: <Acara />,
+      component: ReceptionSlider,
+    },
+    {
+      label: "Lokasi",
+      icon: <Map />,
+      component: MapSlider,
+    },
+    {
+      label: "Galeri",
+      icon: <Galery />,
+      component: GalerySlider,
+    },
+    {
+      label: "Rundown Acara",
+      icon: <RundownAcara />,
+      component: RundownSlider,
+    },
+    {
+      label: "Doa",
+      icon: <Doa />,
+      component: DoaSlider,
+    },
+    // {
+    //   label: "Gift Ibu",
+    //   icon: <Gift />,
+    //   component: GiftSlider,
+    // },
+    {
+      label: "Terimakasih",
+      icon: <Terimakasih />,
+      component: ThankyouSlider,
+    },
+  ],
+  sliderListSeila:[],
 };

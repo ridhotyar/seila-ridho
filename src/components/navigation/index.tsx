@@ -15,7 +15,9 @@ interface Props {
 }
 
 const Navigation: FC<Props> = (props) => {
+  type ConfigKeys = "sliderList" | "sliderListIbu" | "sliderListRidho" | "sliderListSeila";
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [garis, setGaris] = useState<ConfigKeys>('sliderList');
   const [ref, instanceRef] = useKeenSlider<HTMLDivElement>({
     slides: {
       origin: "center",
@@ -44,6 +46,13 @@ const Navigation: FC<Props> = (props) => {
   useEffect(() => {
     const vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty("--vh", `${vh}px`);
+    if (window.location.pathname === '/ibu') {
+      setGaris('sliderListIbu')
+    } else if (window.location.pathname === '/ridho') {
+      setGaris('sliderListRidho')
+    } else {
+      setGaris('sliderList')
+    }
   }, []);
 
   return (
@@ -56,7 +65,7 @@ const Navigation: FC<Props> = (props) => {
           transition={{ duration: 1, bounce: 0 }}
         >
           <div ref={ref} className="keen-slider">
-            {config.sliderList.map((item, idx) => (
+            {config[garis].map((item, idx) => (
               <div
                 key={idx}
                 className="keen-slider__slide"

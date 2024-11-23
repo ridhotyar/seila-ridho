@@ -9,4 +9,5 @@ export {default as GalerySlider} from "./GalerySlider";
 export {default as RundownSlider} from "./RundownSlider";
 export {default as DoaSlider} from "./DoaSlider";
 export {default as GiftSlider} from "./GiftSlider";
+export {default as GiftSliderIbu} from "./GiftSliderIbu";
 export {default as ThankyouSlider} from "./ThankyouSlider";
