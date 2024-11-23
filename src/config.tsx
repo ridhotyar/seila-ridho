@@ -95,7 +95,7 @@ export const config = {
   },
   map: {
     link: "https://maps.app.goo.gl/HqMbpVEZT58TWvTN6",
-    location: "Andaliman Hall, Jl. Abdullah Lubis No.79/101, Merdeka, Kec. Medan Baru, Kota Medan, Sumatera Utara 20153",
+    location: "Andaliman Hall, Jl. Abdullah Lubis No.79/101, Kota Medan, Sumatera Utara 20153",
   },
   galeries: [galery1, galery2, galery3, galery4, galery5, galery6],
   rundown: (
