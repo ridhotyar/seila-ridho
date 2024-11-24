@@ -154,9 +154,9 @@ export const config = {
     bcaNo : "3630160021",
     mandiriNo : "1370016160745",
     alamat : {
-      reciveName: "Anggi/Iqbal",
-      reciveNumber: "+62 877-8857-6061",
-      reciveAddress: "Jln. RAYA CILANDAK, RT002 RW003,(depan material adiwijaya rokman rumah cat warna kuning), KAB. INDRAMAYU, ANJATAN, JAWA BARAT, ID, 45256",
+      reciveName: "Ridho Imantiyar",
+      reciveNumber: "085937002434",
+      reciveAddress: "Rosana Fried Chcicken, Jl. Kp. Malang Tengah I 5a, Wonorejo, Kec. Tegalsari, Surabaya, Jawa Timur 60263",
     }
   },
   thankYou: {
