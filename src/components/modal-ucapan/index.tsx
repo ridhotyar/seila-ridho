@@ -25,7 +25,7 @@ function ModalUcapan() {
       guestCount: guest,
       guestRemark: remark
     }).then( () => {
-      alert("data saved successfully")
+      alert("Terima kasih banyak atas ucapan dan doa yang telah diberikan")
     }).catch( () => {
       alert("error");
     })
