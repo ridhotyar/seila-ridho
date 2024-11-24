@@ -11,3 +11,4 @@ export {default as DoaSlider} from "./DoaSlider";
 export {default as GiftSlider} from "./GiftSlider";
 export {default as GiftSliderIbu} from "./GiftSliderIbu";
 export {default as ThankyouSlider} from "./ThankyouSlider";
+export {default as RSVPSlider} from "./RSVPSlider";

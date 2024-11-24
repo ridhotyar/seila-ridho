@@ -1,5 +1,5 @@
 import { FC } from "react";
-import bgImg from "../../assets/images/img-3.jpeg";
+import bgImg from "../../assets/images/img-8.jpeg";
 import mapLocation from "../../assets/images/map-location.png";
 import classNames from "./MapSlider.module.scss";
 import { motion } from "framer-motion";

@@ -9,6 +9,7 @@ import Terimakasih from "./assets/icons/terimakasih.svg?react";
 import Doa from "./assets/icons/doa.svg?react";
 import RundownAcara from "./assets/icons/rundownacara.svg?react";
 import Gift from "./assets/icons/gift.svg?react";
+import RSVP from "./assets/icons/rsvp.svg?react";
 import backgroundMusic from "./assets/audios/bg-music.mp3";
 import {
   DoaSlider,
@@ -23,7 +24,8 @@ import {
   GalerySlider,
   ThankyouSlider,
   GiftSlider,
-  GiftSliderIbu
+  GiftSliderIbu,
+  RSVPSlider
 } from "./components/sliders";
 import manPhoto from "./assets/images/man.jpg";
 import womanPhoto from "./assets/images/woman.jpg";
@@ -235,6 +237,11 @@ export const config = {
       component: DoaSlider,
     },
     {
+      label: "RSVP",
+      icon: <RSVP />,
+      component: RSVPSlider,
+    },
+    {
       label: "Gift",
       icon: <Gift />,
       component: GiftSlider,
@@ -295,6 +302,11 @@ export const config = {
       label: "Doa",
       icon: <Doa />,
       component: DoaSlider,
+    },
+    {
+      label: "RSVP",
+      icon: <RSVP />,
+      component: RSVPSlider,
     },
     {
       label: "Gift",
@@ -363,6 +375,11 @@ export const config = {
     //   icon: <Gift />,
     //   component: GiftSlider,
     // },
+    {
+      label: "RSVP",
+      icon: <RSVP />,
+      component: RSVPSlider,
+    },
     {
       label: "Terimakasih",
       icon: <Terimakasih />,
