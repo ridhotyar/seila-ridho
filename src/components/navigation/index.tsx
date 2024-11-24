@@ -57,6 +57,7 @@ const Navigation: FC<Props> = (props) => {
 
   return (
     <div className={classNames.main}>
+      <p>navigasi</p>
       {props.isOpened && (
         <motion.div
           className={classNames.content}
