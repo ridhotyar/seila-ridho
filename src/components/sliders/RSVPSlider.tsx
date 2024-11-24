@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC } from "react";
 import bgImg from "../../assets/images/img-9.jpeg";
 import classNames from "./RSVPSlider.module.scss";
 import { motion } from "framer-motion";
