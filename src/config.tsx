@@ -157,7 +157,7 @@ export const config = {
     mandiriNo : "1370016160745",
     alamat : {
       reciveName: "Ridho Imantiyar",
-      reciveNumber: "085937002434",
+      reciveNumber: "085157704756",
       reciveAddress: "Rosana Fried Chcicken, Jl. Kp. Malang Tengah I 5a, Wonorejo, Kec. Tegalsari, Surabaya, Jawa Timur 60263",
     }
   },
