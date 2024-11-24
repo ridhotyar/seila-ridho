@@ -1,48 +1,48 @@
 import classNames from "../styles.module.scss";
-import { useKeenSlider } from "keen-slider/react";
+// import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import Navigation from "../components/navigation";
-import clsx from "clsx";
-import { config } from "../config";
-import BackgroundMusic from "../components/background-music";
+// import Navigation from "../components/navigation";
+// import clsx from "clsx";
+// import { config } from "../config";
+// import BackgroundMusic from "../components/background-music";
 import preLoadAssets from "../utils/preload-assets";
 
 export default function  Home() {
-  type ConfigKeys = "sliderList" | "sliderListIbu" | "sliderListRidho" | "sliderListSeila";
-  const [garis, setGaris] = useState<ConfigKeys>('sliderList');
-  const [playAudio, setPlayAudio] = useState(false);
-  const [loadedSlider, setLoadedSlider] = useState(false);
+  // type ConfigKeys = "sliderList" | "sliderListIbu" | "sliderListRidho" | "sliderListSeila";
+  // const [garis, setGaris] = useState<ConfigKeys>('sliderList');
+  // const [playAudio, setPlayAudio] = useState(false);
+  // const [loadedSlider, setLoadedSlider] = useState(false);
   const [isLoadingAssets, setIsLoadingAssets] = useState(true);
-  const [isOpened, setIsOpened] = useState(false);
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [goFull, setGoFull] = useState(false);
+  // const [isOpened, setIsOpened] = useState(false);
+  // const [currentSlide, setCurrentSlide] = useState(0);
+  // const [goFull, setGoFull] = useState(false);
 
-  const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>(
-    {
-      loop: false,
-      vertical: true,
-      drag: isOpened,
-      initial: 0,
-      slideChanged(slider) {
-        setCurrentSlide(slider.track.details.rel);
-      },
-      created() {
-        setLoadedSlider(true);
-      },
-    },
-    []
-  );
+  // const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>(
+  //   {
+  //     loop: false,
+  //     vertical: true,
+  //     drag: isOpened,
+  //     initial: 0,
+  //     slideChanged(slider) {
+  //       setCurrentSlide(slider.track.details.rel);
+  //     },
+  //     created() {
+  //       setLoadedSlider(true);
+  //     },
+  //   },
+  //   []
+  // );
 
-  const onClickOpen = () => {
-    setGoFull(!goFull);
-    setIsOpened(true);
-    setPlayAudio(true);
-    setTimeout(() => {
-      instanceRef.current?.moveToIdx(1, true);
-    }, 300);
-  };
+  // const onClickOpen = () => {
+  //   setGoFull(!goFull);
+  //   setIsOpened(true);
+  //   setPlayAudio(true);
+  //   setTimeout(() => {
+  //     instanceRef.current?.moveToIdx(1, true);
+  //   }, 300);
+  // };
 
   useEffect(() => {
     setIsLoadingAssets(true);
@@ -55,19 +55,19 @@ export default function  Home() {
       .catch((err) => {
         console.log("error", err);
       });
-    if (window.location.pathname === '/ibu') {
-        setGaris('sliderListIbu')
-    } else if (window.location.pathname === '/ridho') {
-        setGaris('sliderListRidho')
-    } else {
-        setGaris('sliderList')
-    }
+    // if (window.location.pathname === '/ibu') {
+    //     setGaris('sliderListIbu')
+    // } else if (window.location.pathname === '/ridho') {
+    //     setGaris('sliderListRidho')
+    // } else {
+    //     setGaris('sliderList')
+    // }
   }, []);
 
-  useEffect(() => {
-    let e =document.getElementById("full");
-    e?.requestFullscreen();
-  }, [goFull])
+  // useEffect(() => {
+  //   let e =document.getElementById("full");
+  //   e?.requestFullscreen();
+  // }, [goFull])
 
   return (
       <motion.div
@@ -114,13 +114,13 @@ export default function  Home() {
           // </div>
           <div> TEST </div>
         )}
-        {loadedSlider && (
+        {/* {loadedSlider && (
           <Navigation
             currentSlide={currentSlide}
             isOpened={isOpened}
             navigationRef={instanceRef.current!}
           />
-        )}
+        )} */}
       </motion.div>
   );
 }
