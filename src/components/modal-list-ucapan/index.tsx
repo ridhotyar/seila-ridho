@@ -41,10 +41,29 @@ function ListUcapan() {
               fontSize: "16px",
               fontWeight: "500",
             }}>{item.guestName}</p>
-            <p style={{
-              marginLeft: "5px",
-              fontSize: "9px",
-            }}>{item.guestAttendance}</p>
+              {
+                item.guestAttendance === "Hadir" ? (
+                  <p
+                    style={{
+                      marginLeft: "5px",
+                      fontSize: "9px",
+                      color: "green",
+                    }}
+                  >
+                    {item.guestAttendance}
+                  </p>
+                ) : (
+                  <p
+                    style={{
+                      marginLeft: "5px",
+                      fontSize: "9px",
+                      color: "red",
+                    }}
+                  >
+                    {item.guestAttendance}
+                  </p>
+                )
+              }
           </div>
           {item.guestRemark}
         </div>
