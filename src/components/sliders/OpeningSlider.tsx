@@ -15,7 +15,7 @@ interface QueryParams {
 }
 
 const OpeningSlider: FC<Props> = (props) => {
-  const [loadedVideo, setLoadedVideo] = useState(true);
+  const [loadedVideo, setLoadedVideo] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
   const [queryParams, setQueryParams] = useState<QueryParams>({});
 
