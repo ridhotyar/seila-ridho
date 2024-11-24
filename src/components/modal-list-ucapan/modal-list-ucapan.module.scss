@@ -240,6 +240,16 @@ img {
   max-height: 500px;
   scrollbar-width: thin;
   overflow-y: auto;
+  
+  -webkit-display: flex;
+  -webkit-flex-direction: column;
+  -webkit-gap: 9px;
+  -webkit-text-align: start;
+  -webkit-width: 350px;
+  -webkit-max-width: 350px;
+  -webkit-max-height: 500px;
+  -webkit-scrollbar-width: thin;
+  -webkit-overflow-y: auto;
   .listItem{
     display: flex;
     flex-direction: column;
@@ -249,12 +259,27 @@ img {
     background-color: white;
     padding: 19px;
     border-radius: 15px;
+    
+    -webkit-display: flex;
+    -webkit-flex-direction: column;
+    -webkit-font-size: 14px;
+    -webkit-font-family: graphie,sans-serif;
+    -webkit-font-weight: 300;
+    -webkit-background-color: white;
+    -webkit-padding: 19px;
+    -webkit-border-radius: 15px;
     .Header{
       font-family: graphie,sans-serif;
       display: flex;
       margin-bottom: -15px;
       margin-top: -15px;
       align-items: center;
+      
+      -webkit-font-family: graphie,sans-serif;
+      -webkit-display: flex;
+      -webkit-margin-bottom: -15px;
+      -webkit-margin-top: -15px;
+      -webkit-align-items: center;
     }
   }
 }
