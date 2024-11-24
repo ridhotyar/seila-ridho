@@ -229,3 +229,32 @@ img {
     -webkit-transform: translate(-50%, -50%) scale(1);
   }
 }
+
+.listUcapan{
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  text-align: start;
+  width: 350px;
+  max-width: 350px;
+  max-height: 500px;
+  scrollbar-width: thin;
+  overflow-y: auto;
+  .listItem{
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    font-family: graphie,sans-serif;
+    font-weight: 300;
+    background-color: white;
+    padding: 19px;
+    border-radius: 15px;
+    .Header{
+      font-family: graphie,sans-serif;
+      display: flex;
+      margin-bottom: -15px;
+      margin-top: -15px;
+      align-items: center;
+    }
+  }
+}

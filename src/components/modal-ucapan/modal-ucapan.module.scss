@@ -229,3 +229,79 @@ img {
     -webkit-transform: translate(-50%, -50%) scale(1);
   }
 }
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  
+  -webkit-display: flex;
+  -webkit-flex-direction: column;
+  -webkit-gap: 16px;
+  input {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid rgb(169, 127, 113);
+    background-color: rgba(248, 247, 237, 0.9);
+    font-size: 11px;
+    color: rgb(79, 55, 38);
+    font-family: Arima;
+    
+    -webkit-padding: 5px;
+    -webkit-border-radius: 5px;
+    -webkit-border: 1px solid rgb(169, 127, 113);
+    -webkit-background-color: rgba(248, 247, 237, 0.9);
+    -webkit-font-size: 11px;
+    -webkit-color: rgb(79, 55, 38);
+    -webkit-font-family: Arima;
+  }
+  select {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid rgb(169, 127, 113);
+    background-color: rgba(248, 247, 237, 0.9);
+    font-size: 11px;
+    color: rgb(79, 55, 38);
+    font-family: Arima;
+    
+    -webkit-padding: 5px;
+    -webkit-border-radius: 5px;
+    -webkit-border: 1px solid rgb(169, 127, 113);
+    -webkit-background-color: rgba(248, 247, 237, 0.9);
+    -webkit-font-size: 11px;
+    -webkit-color: rgb(79, 55, 38);
+    -webkit-font-family: Arima;
+  }
+  textarea {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid rgb(169, 127, 113);
+    background-color: rgba(248, 247, 237, 0.9);
+    font-size: 11px;
+    color: rgb(79, 55, 38);
+    font-family: Arima;
+    
+    -webkit-padding: 5px;
+    -webkit-border-radius: 5px;
+    -webkit-border: 1px solid rgb(169, 127, 113);
+    -webkit-background-color: rgba(248, 247, 237, 0.9);
+    -webkit-font-size: 11px;
+    -webkit-color: rgb(79, 55, 38);
+    -webkit-font-family: Arima;
+  }
+  button {
+    padding: 13px;
+    background-color: rgba(102, 90, 53, 0.8);
+    color: rgb(255, 255, 255);
+    font-size: 11px;
+    border-radius: 25px;
+    border: 0px solid rgb(84, 74, 44);
+    
+    -webkit-padding: 5px;
+    -webkit-background-color: rgba(102, 90, 53, 0.8);
+    -webkit-color: rgb(255, 255, 255);
+    -webkit-font-size: 11px;
+    -webkit-border-radius: 25px;
+    -webkit-border: 0px solid rgb(84, 74, 44);
+  }
+}

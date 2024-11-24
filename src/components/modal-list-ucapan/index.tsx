@@ -1,10 +1,7 @@
-// import * as Dialog from "@radix-ui/react-dialog";
-// import XIcon from "../../assets/icons/x-icon.svg?react";
-// import classNames from "./modal-ucapan.module.scss";
-// import { config } from "../../config";
 import { useEffect, useState } from "react";
 import { getDatabase, ref, get } from "firebase/database";
 import { app } from "../../firebaseConfig";
+import classNames from "./modal-list-ucapan.module.scss";
 
 interface Ucapan {
   guestName: string;
@@ -16,6 +13,7 @@ interface Ucapan {
 function ListUcapan() {
 
   let [fruitArray, setFruitArray] = useState<Ucapan[]>([]);
+  const [visible, setVisible] = useState(false);
 
   const fetchData = async () => {
     const db = getDatabase(app);
@@ -24,7 +22,7 @@ function ListUcapan() {
     if(snapshot.exists()) {
       setFruitArray(Object.values(snapshot.val()));
     } else {
-      alert("error");
+      setVisible(true);
     }
   }
 
@@ -33,14 +31,24 @@ function ListUcapan() {
   }, []);
 
   return (
-    <div>
-      <ul>
-        {fruitArray.map( (item, index) => (
-          <li key={index}>
-            {item.guestName},{item.guestAttendance},{item.guestCount},{item.guestRemark}
-          </li>
-        ))}
-      </ul>
+    <div className={classNames.listUcapan}>
+      {visible && <div></div>}
+      {fruitArray.map( (item, index) => (
+        <div className={classNames.listItem} key={index}>
+          
+          <div className={classNames.Header}>
+            <p style={{
+              fontSize: "16px",
+              fontWeight: "500",
+            }}>{item.guestName}</p>
+            <p style={{
+              marginLeft: "5px",
+              fontSize: "9px",
+            }}>{item.guestAttendance}</p>
+          </div>
+          {item.guestRemark}
+        </div>
+      ))}
     </div>
   )
 };
