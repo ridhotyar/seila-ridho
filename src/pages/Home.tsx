@@ -4,7 +4,7 @@ import "keen-slider/keen-slider.min.css";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Navigation from "../components/navigation";
-// import clsx from "clsx";
+import clsx from "clsx";
 import { config } from "../config";
 import BackgroundMusic from "../components/background-music";
 import preLoadAssets from "../utils/preload-assets";
@@ -65,10 +65,10 @@ export default function  Home() {
     }
   }, []);
 
-  // useEffect(() => {
-  //   let e =document.getElementById("full");
-  //   e?.requestFullscreen();
-  // }, [goFull])
+  useEffect(() => {
+    let e =document.getElementById("full");
+    e?.requestFullscreen();
+  }, [goFull])
 
   return (
       <motion.div
@@ -93,14 +93,9 @@ export default function  Home() {
         {!isLoadingAssets && (
           <div
             ref={sliderRef}
-            // className={clsx("keen-slider", classNames["keen-slider-main"])}
-            // style={{ position: "relative"}}
-          > isit loaded?
-            <OpeningSlider
-            isOpened={isOpened}
-            onClickOpen={onClickOpen}
-            inView={currentSlide === 0}
-            />
+            className={clsx("keen-slider", classNames["keen-slider-main"])}
+            style={{ position: "relative"}}
+          >
             <BackgroundMusic
               isOpened={isOpened}
               playAudio={playAudio}
@@ -109,7 +104,7 @@ export default function  Home() {
             {(isOpened ? config[garis] : config[garis].slice(0)).map(
               ({ component: Slider }, idx) => (
                 <div key={idx} 
-                // className="keen-slider__slide"
+                className="keen-slider__slide"
                 >
                   <Slider
                     isOpened={isOpened}
