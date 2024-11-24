@@ -1,15 +1,21 @@
 // import * as Dialog from "@radix-ui/react-dialog";
-import XIcon from "../../assets/icons/x-icon.svg?react";
-import classNames from "./modal-ucapan.module.scss";
+// import XIcon from "../../assets/icons/x-icon.svg?react";
+// import classNames from "./modal-ucapan.module.scss";
 // import { config } from "../../config";
 import { useEffect, useState } from "react";
 import { getDatabase, ref, get } from "firebase/database";
 import { app } from "../../firebaseConfig";
 
+interface Ucapan {
+  guestName: string;
+  guestAttendance: string;
+  guestCount: string;
+  guestRemark: string;
+}
 
 function ListUcapan() {
 
-  let [fruitArray, setFruitArray] = useState([]);
+  let [fruitArray, setFruitArray] = useState<Ucapan[]>([]);
 
   const fetchData = async () => {
     const db = getDatabase(app);
