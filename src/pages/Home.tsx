@@ -8,7 +8,6 @@ import clsx from "clsx";
 import { config } from "../config";
 import BackgroundMusic from "../components/background-music";
 import preLoadAssets from "../utils/preload-assets";
-import { OpeningSlider } from "../components/sliders";
 
 export default function  Home() {
   type ConfigKeys = "sliderList" | "sliderListIbu" | "sliderListRidho" | "sliderListSeila";
@@ -95,7 +94,7 @@ export default function  Home() {
             ref={sliderRef}
             className={clsx("keen-slider", classNames["keen-slider-main"])}
             style={{ position: "relative"}}
-          >
+          > 
             <BackgroundMusic
               isOpened={isOpened}
               playAudio={playAudio}
