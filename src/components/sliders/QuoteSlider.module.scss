@@ -16,16 +16,16 @@
 
 .bgVideo {
   height: 100%;
+  width: 100%;
   position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  
+  inset: 0;
+  object-fit: cover;
+
   -webkit-height: 100%;
+  -webkit-width: 100%;
   -webkit-position: absolute;
-  -webkit-left: 50%;
-  -webkit-top: 50%;
-  -webkit-transform: translate(-50%, -50%);
+  -webkit-inset: 0;
+  -webkit-object-fit: cover;
 }
 
 .content {
