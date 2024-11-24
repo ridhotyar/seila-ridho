@@ -8,6 +8,7 @@ import Navigation from "../components/navigation";
 import { config } from "../config";
 import BackgroundMusic from "../components/background-music";
 import preLoadAssets from "../utils/preload-assets";
+import { OpeningSlider } from "../components/sliders";
 
 export default function  Home() {
   type ConfigKeys = "sliderList" | "sliderListIbu" | "sliderListRidho" | "sliderListSeila";
@@ -95,6 +96,11 @@ export default function  Home() {
             // className={clsx("keen-slider", classNames["keen-slider-main"])}
             // style={{ position: "relative"}}
           > isit loaded?
+            <OpeningSlider
+            isOpened={isOpened}
+            onClickOpen={onClickOpen}
+            inView={currentSlide === 0}
+            />
             <BackgroundMusic
               isOpened={isOpened}
               playAudio={playAudio}
