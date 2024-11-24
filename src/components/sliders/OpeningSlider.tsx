@@ -15,7 +15,7 @@ interface QueryParams {
 }
 
 const OpeningSlider: FC<Props> = (props) => {
-  const [loadedVideo, setLoadedVideo] = useState(false);
+  const [loadedVideo, setLoadedVideo] = useState(true);
   const videoRef = useRef<HTMLVideoElement>(null);
   const [queryParams, setQueryParams] = useState<QueryParams>({});
 
@@ -39,7 +39,6 @@ const OpeningSlider: FC<Props> = (props) => {
 
   return (
     <div className={classNames.main}>
-      <p>Page 1</p>
       <video
         ref={videoRef}
         className={classNames.bgVideo}
