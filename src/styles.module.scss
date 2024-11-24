@@ -3,6 +3,11 @@
   flex-direction: column;
   align-items: center;
   position: relative;
+
+  -webkit-display: flex;
+  -webkit-flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-position: relative;
 }
 
 .loader-container {
@@ -14,14 +19,29 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #000000;
-  -webkit-background-color: #000000;
+  background-color: #eeeeee;
   position: fixed;
   z-index: 100;
+  
+  -webkit-height: 100vh;
+  -webkit-height: calc(var(--vh, 1vh) * 100);
+  -webkit-max-width: 451px;
+  -webkit-width: 100%;
+  -webkit-display: flex;
+  -webkit-flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-justify-content: center;
+  -webkit-background-color: #eeeeee;
+  -webkit-position: fixed;
+  -webkit-z-index: 100;
   .loader {
     font-size: 20px;
     font-weight: 500;
     color: #3b3b3b;
+
+    -webkit-font-size: 20px;
+    -webkit-font-weight: 500;
+    -webkit-color: #3b3b3b;
   }
 }
 
@@ -29,4 +49,8 @@
   height: 100vh;
   height: calc(var(--vh, 1vh) * 100);
   max-width: 451px;
+
+  -webkit-height: 100vh;
+  -webkit-height: calc(var(--vh, 1vh) * 100);
+  -webkit-max-width: 451px;
 }

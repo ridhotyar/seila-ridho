@@ -5,6 +5,13 @@
   position: relative;
   justify-content: center;
   align-items: center;
+  
+  -webkit-width: 100%;
+  -webkit-min-height: 100%;
+  -webkit-display: flex;
+  -webkit-position: relative;
+  -webkit-justify-content: center;
+  -webkit-align-items: center;
 }
 
 .bgVideo {
@@ -13,6 +20,12 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  
+  -webkit-height: 100%;
+  -webkit-position: absolute;
+  -webkit-left: 50%;
+  -webkit-top: 50%;
+  -webkit-transform: translate(-50%, -50%);
 }
 
 .content {
@@ -22,10 +35,21 @@
   position: relative;
   z-index: 1;
   color: #4f3726;
+  
+  -webkit-display: flex;
+  -webkit-flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-position: relative;
+  -webkit-z-index: 1;
+  -webkit-color: #4f3726;
   .title {
     font-size: 12px;
     font-weight: 400;
     margin: 0;
+    
+    -webkit-font-size: 12px;
+    -webkit-font-weight: 400;
+    -webkit-margin: 0;
   }
   .names {
     font-family: "Dancing Script", cursive;
@@ -37,16 +61,35 @@
     margin: 0;
     max-width: 200px;
     text-align: center;
+    
+    -webkit-font-family: "Dancing Script", cursive;
+    -webkit-font-weight: 400;
+    -webkit-font-size: 82px;
+    -webkit-font-weight: 400;
+    -webkit-color: #70633a;
+    -webkit-line-height: 1;
+    -webkit-margin: 0;
+    -webkit-max-width: 200px;
+    -webkit-text-align: center;
   }
   .invitation {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 50px;
+    
+    -webkit-display: flex;
+    -webkit-flex-direction: column;
+    -webkit-align-items: center;
+    -webkit-margin-top: 50px;
     > p:nth-child(1) {
       font-size: 11px;
       font-weight: 400;
       margin: 0;
+      
+      -webkit-font-size: 11px;
+      -webkit-font-weight: 400;
+      -webkit-margin: 0;
     }
     > p:nth-child(2) {
       font-size: 14px;
@@ -55,6 +98,13 @@
       max-width: 300px;
       margin-top: 10px;
       text-align: center;
+      
+      -webkit-font-size: 14px;
+      -webkit-font-weight: 500;
+      -webkit-margin: 0;
+      -webkit-max-width: 300px;
+      -webkit-margin-top: 10px;
+      -webkit-text-align: center;
     }
     .button {
       margin-top: 30px;
@@ -69,8 +119,23 @@
       cursor: pointer;
       border: 1px solid #fff;
       transition: all 0.2s ease-in-out;
+      
+      -webkit-margin-top: 30px;
+      -webkit-border-radius: 15px;
+      -webkit-background-color: #665a35cc;
+      -webkit-border: none;
+      -webkit-outline: none;
+      -webkit-color: #fff;
+      -webkit-font-size: 14px;
+      -webkit-font-weight: 500;
+      -webkit-padding: 10px 20px;
+      // cursor: pointer;
+      -webkit-border: 1px solid #fff;
+      -webkit-transition: all 0.2s ease-in-out;
       &:hover {
         background-color: #665a35;
+        
+        -webkit-background-color: #665a35;
       }
     }
   }

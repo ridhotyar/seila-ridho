@@ -4,6 +4,12 @@
   z-index: 100;
   right: 15px;
   bottom: 100px;
+  
+  -webkit-display: flex;
+  -webkit-position: absolute;
+  -webkit-z-index: 100;
+  -webkit-right: 15px;
+  -webkit-bottom: 100px;
   > button {
     display: flex;
     align-items: center;
@@ -15,10 +21,25 @@
     border: 2px solid rgb(255, 255, 255);
     background-color: rgb(71, 63, 37);
     cursor: pointer;
+    
+    -webkit-display: flex;
+    -webkit-align-items: center;
+    -webkit-justify-content: center;
+    -webkit-border-radius: 100%;
+    -webkit-height: 42px;
+    -webkit-width: 42px;
+    -webkit-outline: none;
+    -webkit-border: 2px solid rgb(255, 255, 255);
+    -webkit-background-color: rgb(71, 63, 37);
+    // cursor: pointer;
   }
   .icon {
     width: 22px;
     height: 22px;
     fill: #fff;
+    
+    -webkit-width: 22px;
+    -webkit-height: 22px;
+    -webkit-fill: #fff;
   }
 }

@@ -5,6 +5,13 @@
   position: relative;
   justify-content: center;
   align-items: center;
+  
+  -webkit-width: 100%;
+  -webkit-min-height: 100%;
+  -webkit-display: flex;
+  -webkit-position: relative;
+  -webkit-justify-content: center;
+  -webkit-align-items: center;
 }
 
 .bgVideo {
@@ -13,6 +20,12 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  
+  -webkit-height: 100%;
+  -webkit-position: absolute;
+  -webkit-left: 50%;
+  -webkit-top: 50%;
+  -webkit-transform: translate(-50%, -50%);
 }
 
 .content {
@@ -22,6 +35,13 @@
   position: relative;
   z-index: 1;
   color: #4f3726;
+  
+  -webkit-display: flex;
+  -webkit-flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-position: relative;
+  -webkit-z-index: 1;
+  -webkit-color: #4f3726;
   .brideName {
     font-family: "Dancing Script", cursive;
     font-size: 40px;
@@ -29,6 +49,13 @@
     margin: 0;
     margin-top: 20px;
     margin-bottom: 50px;
+    
+    -webkit-font-family: "Dancing Script", cursive;
+    -webkit-font-size: 40px;
+    -webkit-font-weight: 500;
+    -webkit-margin: 0;
+    -webkit-margin-top: 20px;
+    -webkit-margin-bottom: 50px;
   }
   .content {
     font-family: "Arima", system-ui;
@@ -39,5 +66,14 @@
     margin: 0;
     max-width: 210px;
     text-align: center;
+    
+    -webkit-font-family: "Arima", system-ui;
+    -webkit-font-weight: 400;
+    -webkit-font-size: 16px;
+    -webkit-font-weight: 400;
+    -webkit-line-height: 1.5;
+    -webkit-margin: 0;
+    -webkit-max-width: 210px;
+    -webkit-text-align: center;
   }
 }

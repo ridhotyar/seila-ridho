@@ -5,6 +5,13 @@
   position: relative;
   justify-content: center;
   align-items: center;
+
+  -webkit-width: 100%;
+  -webkit-min-height: 100%;
+  -webkit-display: flex;
+  -webkit-position: relative;
+  -webkit-justify-content: center;
+  -webkit-align-items: center;
 }
 
 .bgImg {
@@ -14,6 +21,13 @@
   object-fit: cover;
   left: 0;
   top: 0;
+
+  -webkit-height: 100%;
+  -webkit-width: 100%;
+  -webkit-position: absolute;
+  -webkit-object-fit: cover;
+  -webkit-left: 0;
+  -webkit-top: 0;
 }
 
 .content {
@@ -23,12 +37,25 @@
   position: relative;
   z-index: 1;
   color: rgb(71, 63, 37);
+
+  -webkit-display: flex;
+  -webkit-flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-position: relative;
+  -webkit-z-index: 1;
+  -webkit-color: rgb(71, 63, 37);
   .name {
     font-family: "Dancing Script", cursive;
     font-size: 31px;
     font-weight: 500;
     margin: 0;
     line-height: 1;
+
+    -webkit-font-family: "Dancing Script", cursive;
+    -webkit-font-size: 31px;
+    -webkit-font-weight: 500;
+    -webkit-margin: 0;
+    -webkit-line-height: 1;
   }
   .desc {
     font-family: "Arima", system-ui;
@@ -40,12 +67,27 @@
     margin-top: 10px;
     max-width: 350px;
     text-align: center;
+    
+    -webkit-font-family: "Arima", system-ui;
+    -webkit-font-weight: 400;
+    -webkit-font-size: 15px;
+    -webkit-font-weight: 400;
+    -webkit-line-height: 1;
+    -webkit-margin: 0;
+    -webkit-margin-top: 10px;
+    -webkit-max-width: 350px;
+    -webkit-text-align: center;
   }
   .photoWrapper {
     display: flex;
     align-items: center;
     gap: 10px;
     margin: 10px 0;
+    
+    -webkit-display: flex;
+    -webkit-align-items: center;
+    -webkit-gap: 10px;
+    -webkit-margin: 10px 0;
   }
   .button {
     display: flex;
@@ -62,11 +104,30 @@
     margin: 10px 0;
     cursor: pointer;
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    
+    -webkit-display: flex;
+    -webkit-align-items: center;
+    -webkit-gap: 5px;
+    -webkit-border-radius: 15px;
+    -webkit-background-color: #665a35cc;
+    -webkit-border: none;
+    -webkit-outline: none;
+    -webkit-color: #fff;
+    -webkit-font-size: 11px;
+    -webkit-font-weight: 400;
+    -webkit-padding: 5px 10px;
+    -webkit-margin: 10px 0;
+    // cursor: pointer;
+    -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
     &:hover {
       background-color: #665a35;
+      
+      -webkit-background-color: #665a35;
     }
     > svg {
       width: 10px;
+      
+      -webkit-width: 10px;
     }
   }
 }

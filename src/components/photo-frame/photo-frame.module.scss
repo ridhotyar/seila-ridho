@@ -2,11 +2,18 @@ $width: 160px;
 
 .main {
   position: relative;
+  
+  -webkit-position: relative;
   .frame {
     position: absolute;
     width: $width;
     left: 0;
     z-index: 1;
+    
+    -webkit-position: absolute;
+    -webkit-width: $width;
+    -webkit-left: 0;
+    -webkit-z-index: 1;
   }
   .img {
     width: $width;
@@ -15,5 +22,12 @@ $width: 160px;
     scale: 0.9;
     object-fit: cover;
     object-position: center;
+    
+    -webkit-width: $width;
+    -webkit-aspect-ratio: 7/8;
+    -webkit-border-radius: 150px;
+    -webkit-scale: 0.9;
+    -webkit-object-fit: cover;
+    -webkit-object-position: center;
   }
 }

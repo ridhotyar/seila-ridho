@@ -10,8 +10,22 @@
   border: 1px solid #fff;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
+  
+  -webkit-border-radius: 15px;
+  -webkit-background-color: #665a35cc;
+  -webkit-border: none;
+  -webkit-outline: none;
+  -webkit-color: #fff;
+  -webkit-font-size: 12px;
+  -webkit-font-weight: 500;
+  -webkit-padding: 8px 17px;
+  -webkit-border: 1px solid #fff;
+  // cursor: pointer;
+  -webkit-transition: all 0.2s ease-in-out;
   &:hover {
     background-color: #665a35;
+    
+    -webkit-background-color: #665a35;
   }
 }
 
@@ -20,6 +34,11 @@
   position: fixed;
   inset: 0;
   animation: overlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+  
+  -webkit-background-color: #000000dd;
+  -webkit-position: fixed;
+  -webkit-inset: 0;
+  -webkit-animation: overlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .DialogContent {
@@ -37,9 +56,26 @@
   max-height: 85vh;
   padding: 25px;
   animation: contentShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+  
+  -webkit-border: 3px solid #c3b899;
+  -webkit-background-color: white;
+  -webkit-border-radius: 15px;
+  -webkit-box-shadow: hsl(206 22% 7% / 35%) 0px 10px 38px -10px,
+    hsl(206 22% 7% / 20%) 0px 10px 20px -15px;
+  -webkit-position: fixed;
+  -webkit-top: 50%;
+  -webkit-left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -webkit-width: 300px;
+  -webkit-max-width: 450px;
+  -webkit-max-height: 85vh;
+  -webkit-padding: 25px;
+  -webkit-animation: contentShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 .DialogContent:focus {
   outline: none;
+  
+  -webkit-outline: none;
 }
 
 .DialogTitle {
@@ -49,6 +85,13 @@
   color: #665a35;
   text-align: center;
   margin: 10px 0;
+  
+  -webkit-font-family: "Dancing Script", cursive;
+  -webkit-font-size: 30px;
+  -webkit-font-weight: 500;
+  -webkit-color: #665a35;
+  -webkit-text-align: center;
+  -webkit-margin: 10px 0;
 }
 
 .DialogDescription {
@@ -56,6 +99,11 @@
   color: var(--mauve-11);
   font-size: 15px;
   line-height: 1.5;
+  
+  -webkit-margin: 10px 0 20px;
+  -webkit-color: var(--mauve-11);
+  -webkit-font-size: 15px;
+  -webkit-line-height: 1.5;
 }
 
 .IconButton {
@@ -73,12 +121,31 @@
   right: 10px;
   outline: none;
   border: none;
+  
+  -webkit-font-family: inherit;
+  -webkit-border-radius: 100%;
+  -webkit-height: 28px;
+  -webkit-width: 28px;
+  -webkit-display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-justify-content: center;
+  -webkit-color: #665a35;
+  -webkit-background-color: transparent;
+  -webkit-position: absolute;
+  -webkit-top: 10px;
+  -webkit-right: 10px;
+  -webkit-outline: none;
+  -webkit-border: none;
 }
 
 .content {
   display: flex;
   flex-direction: column;
   gap: 25px;
+  
+  -webkit-display: flex;
+  -webkit-flex-direction: column;
+  -webkit-gap: 25px;
 }
 
 .desc {
@@ -89,6 +156,14 @@
   line-height: 1.3;
   margin: 0;
   text-align: end;
+  
+  -webkit-font-family: "Arima", system-ui;
+  -webkit-font-weight: 400;
+  -webkit-font-size: 15px;
+  -webkit-font-weight: 400;
+  -webkit-line-height: 1.3;
+  -webkit-margin: 0;
+  -webkit-text-align: end;
 }
 
 .note {
@@ -99,24 +174,42 @@
   line-height: 1.3;
   margin: 0;
   text-align: center;
+  
+  -webkit-font-family: "Arima", system-ui;
+  -webkit-font-weight: 400;
+  -webkit-font-size: 10px;
+  -webkit-font-weight: 400;
+  -webkit-line-height: 1.3;
+  -webkit-margin: 0;
+  -webkit-text-align: center;
 }
 
 img {
   width: 120px;
+  
+  -webkit-width: 120px;
 }
 
 .card {
   display: flex;
   justify-content: space-between;
   gap: 10px;
+  
+  -webkit-display: flex;
+  -webkit-justify-content: space-between;
+  -webkit-gap: 10px;
 }
 
 @keyframes overlayShow {
   from {
     opacity: 0;
+    
+    -webkit-opacity: 0;
   }
   to {
     opacity: 1;
+    
+    -webkit-opacity: 1;
   }
 }
 
@@ -124,9 +217,15 @@ img {
   from {
     opacity: 0;
     transform: translate(-50%, -48%) scale(0.96);
+    
+    -webkit-opacity: 0;
+    -webkit-transform: translate(-50%, -48%) scale(0.96);
   }
   to {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
+    
+    -webkit-opacity: 1;
+    -webkit-transform: translate(-50%, -50%) scale(1);
   }
 }
