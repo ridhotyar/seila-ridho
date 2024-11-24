@@ -22,7 +22,7 @@ const Thankyou: FC<Props> = (props) => {
 
   return (
     <div className={classNames.main}>
-      <video ref={videoRef} className={classNames.bgVideo} muted loop>
+      <video ref={videoRef} className={classNames.bgVideo} muted loop playsInline>
         <source src={bgvideo} type="video/mp4" />
       </video>
       {props.inView && (

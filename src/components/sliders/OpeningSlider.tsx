@@ -44,6 +44,7 @@ const OpeningSlider: FC<Props> = (props) => {
         className={classNames.bgVideo}
         muted
         loop
+        playsInline
         onLoadedData={() => setLoadedVideo(true)}
         style={{ opacity: loadedVideo ? 1 : 0, transition: "opacity 0.5s" }}
       >
