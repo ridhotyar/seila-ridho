@@ -39,6 +39,7 @@ const OpeningSlider: FC<Props> = (props) => {
 
   return (
     <div className={classNames.main}>
+      <p>Page 1</p>
       <video
         ref={videoRef}
         className={classNames.bgVideo}
