@@ -70,7 +70,6 @@ export default function  Home() {
   }, [goFull])
 
   return (
-    <div id="">
       <motion.div
         className={classNames.main}
         initial={{ opacity: 0 }}
@@ -91,28 +90,29 @@ export default function  Home() {
           )}
         </AnimatePresence>
         {!isLoadingAssets && (
-          <div
-            ref={sliderRef}
-            className={clsx("keen-slider", classNames["keen-slider-main"])}
-            style={{ position: "relative" }}
-          >
-            <BackgroundMusic
-              isOpened={isOpened}
-              playAudio={playAudio}
-              setPlayAudio={setPlayAudio}
-            />
-            {(isOpened ? config[garis] : config[garis].slice(0)).map(
-              ({ component: Slider }, idx) => (
-                <div key={idx} className="keen-slider__slide">
-                  <Slider
-                    isOpened={isOpened}
-                    onClickOpen={onClickOpen}
-                    inView={currentSlide === idx}
-                  />
-                </div>
-              )
-            )}
-          </div>
+          // <div
+          //   ref={sliderRef}
+          //   className={clsx("keen-slider", classNames["keen-slider-main"])}
+          //   style={{ position: "relative" }}
+          // >
+          //   <BackgroundMusic
+          //     isOpened={isOpened}
+          //     playAudio={playAudio}
+          //     setPlayAudio={setPlayAudio}
+          //   />
+          //   {(isOpened ? config[garis] : config[garis].slice(0)).map(
+          //     ({ component: Slider }, idx) => (
+          //       <div key={idx} className="keen-slider__slide">
+          //         <Slider
+          //           isOpened={isOpened}
+          //           onClickOpen={onClickOpen}
+          //           inView={currentSlide === idx}
+          //         />
+          //       </div>
+          //     )
+          //   )}
+          // </div>
+          <div> TEST </div>
         )}
         {loadedSlider && (
           <Navigation
@@ -122,6 +122,5 @@ export default function  Home() {
           />
         )}
       </motion.div>
-      </div>
   );
 }
