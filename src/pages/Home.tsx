@@ -94,7 +94,7 @@ export default function  Home() {
             ref={sliderRef}
             // className={clsx("keen-slider", classNames["keen-slider-main"])}
             // style={{ position: "relative"}}
-          >
+          > isit loaded?
             <BackgroundMusic
               isOpened={isOpened}
               playAudio={playAudio}
@@ -102,7 +102,9 @@ export default function  Home() {
             />
             {(isOpened ? config[garis] : config[garis].slice(0)).map(
               ({ component: Slider }, idx) => (
-                <div key={idx} className="keen-slider__slide">
+                <div key={idx} 
+                // className="keen-slider__slide"
+                >
                   <Slider
                     isOpened={isOpened}
                     onClickOpen={onClickOpen}
