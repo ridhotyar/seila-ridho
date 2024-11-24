@@ -239,7 +239,7 @@ img {
   max-width: 350px;
   height: 50vh;
   scrollbar-width: thin;
-  overflow-y: auto;
+  overflow-y: scroll;
   
   -webkit-display: flex;
   -webkit-flex-direction: column;
@@ -249,7 +249,7 @@ img {
   -webkit-max-width: 350px;
   -webkit-height: 50vh;
   -webkit-scrollbar-width: thin;
-  -webkit-overflow-y: auto;
+  -webkit-overflow-y: scroll;
   .listItem{
     display: flex;
     flex-direction: column;
