@@ -17,13 +17,13 @@ export default function  Home() {
   const [isLoadingAssets, setIsLoadingAssets] = useState(true);
   const [isOpened, setIsOpened] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [goFull, setGoFull] = useState(false);
+  const [dragEnabled, setDragEnabled] = useState(false);
 
   const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>(
     {
       loop: false,
       vertical: true,
-      drag: isOpened,
+      drag: dragEnabled,
       initial: 0,
       slideChanged(slider) {
         setCurrentSlide(slider.track.details.rel);
@@ -36,7 +36,7 @@ export default function  Home() {
   );
 
   const onClickOpen = () => {
-    setGoFull(!goFull);
+    setDragEnabled(true)
     setIsOpened(true);
     setPlayAudio(true);
     setTimeout(() => {
@@ -63,11 +63,6 @@ export default function  Home() {
         setGaris('sliderList')
     }
   }, []);
-
-  useEffect(() => {
-    let e =document.getElementById("full");
-    e?.requestFullscreen();
-  }, [goFull])
 
   return (
       <motion.div
@@ -114,7 +109,6 @@ export default function  Home() {
               )
             )}
           </div>
-          // <div> TEST </div>
         )}
         {loadedSlider && (
           <Navigation
