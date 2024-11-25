@@ -13,7 +13,7 @@ const ModalAngpao = () => {
   return (
   <Dialog.Root>
     <Dialog.Trigger asChild>
-      <button className={classNames.button}>Kirim Angpao</button>
+      <button className={classNames.button} onClick={ () => {setCopied("")}}>Kirim Angpao</button>
     </Dialog.Trigger>
     <Dialog.Portal>
       <Dialog.Overlay className={classNames.DialogOverlay} />

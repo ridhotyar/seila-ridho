@@ -1,11 +1,9 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import bgImg from "../../assets/images/img-9.jpeg";
 import classNames from "./RSVPSlider.module.scss";
 import { motion } from "framer-motion";
 import ModalAngpao from "../modal-ucapan";
 import ListUcapan from "../modal-list-ucapan";
-// import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-// import { config } from "../../config";
 
 interface Props {
   inView: boolean;
@@ -13,8 +11,11 @@ interface Props {
 
 const RSVPSlider: FC<Props> = (props) => {
   
-  // const [copied,setCopied] = useState("");
-  // const [number,setNumber] = useState("");
+  const [refreshData, setRefreshData] = useState(false);
+
+  const handleDataRefresh = () => {
+    setRefreshData((prev) => !prev);  // Toggle the state to trigger reload in ListUcapan
+  };
 
   return (
     <div className={classNames.main}>
@@ -35,7 +36,7 @@ const RSVPSlider: FC<Props> = (props) => {
             transition={{ bounce: 0, duration: 2, ease: "easeInOut" }}
             className={classNames.content}
           >
-            <ListUcapan />
+            <ListUcapan refreshData={refreshData}/>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 100 }}
@@ -43,7 +44,7 @@ const RSVPSlider: FC<Props> = (props) => {
             transition={{ bounce: 0, duration: 2, ease: "easeInOut" }}
             className={classNames.buttons}
           >
-            <ModalAngpao />
+            <ModalAngpao onSubmit={handleDataRefresh}/>
           </motion.div>
         </div>
       )}

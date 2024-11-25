@@ -10,7 +10,7 @@ const ModalGift = () => {
   return(
   <Dialog.Root>
     <Dialog.Trigger asChild>
-      <button className={classNames.button}>Kirim Kado</button>
+      <button className={classNames.button} onClick={ () => {setCopied("")}}>Kirim Kado</button>
     </Dialog.Trigger>
     <Dialog.Portal>
       <Dialog.Overlay className={classNames.DialogOverlay} />

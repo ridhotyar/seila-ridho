@@ -5,16 +5,25 @@ import { useState } from "react";
 import { getDatabase, ref, set, push } from "firebase/database";
 import { app } from "../../firebaseConfig";
 
+interface ModalUcapanProps {
+  onSubmit: () => void;  // Callback to refresh data
+}
 
-function ModalUcapan() {
-
-  // const [copied,setCopied] = useState("");
-  // const [number,setNumber] = useState("");
+function ModalUcapan({ onSubmit }: ModalUcapanProps) {
 
   let [name, setName] = useState("");
   let [attendance, setAttendance] = useState("");
   let [guest, setGuest] = useState("");
   let [remark, setRemark] = useState("");
+  const [open, setOpen] = useState(false);
+
+  const validateForm = () => {
+    if (name===("") || attendance===("") || remark===("")){
+      alert("Nama, Kehadiran, dan Ucapan tidak boleh kosong")
+    } else {
+      saveData();
+    }
+  }
 
   const saveData = async () => {
     const db = getDatabase(app);
@@ -26,6 +35,8 @@ function ModalUcapan() {
       guestRemark: remark
     }).then( () => {
       alert("Terima kasih banyak atas ucapan dan doa yang telah diberikan")
+      setOpen(false);
+      onSubmit();
     }).catch( () => {
       alert("error");
     })
@@ -39,9 +50,9 @@ function ModalUcapan() {
   }
 
   return (
-  <Dialog.Root>
+  <Dialog.Root open={open} onOpenChange={setOpen}>
     <Dialog.Trigger asChild>
-      <button className={classNames.button}>Kirim Ucapan dan Doa</button>
+      <button className={classNames.button} onClick={setEmpty}>Kirim Ucapan dan Doa</button>
     </Dialog.Trigger>
     <Dialog.Portal>
       <Dialog.Overlay className={classNames.DialogOverlay} />
@@ -74,7 +85,7 @@ function ModalUcapan() {
 
           <textarea value={remark} onChange={(e) => setRemark(e.target.value)} placeholder="Ucapan" maxLength={300} rows={4}/>
 
-          <button onClick={saveData}> Kirim </button>
+          <button onClick={validateForm}> Kirim </button>
         </div>
         
         <Dialog.Close asChild>

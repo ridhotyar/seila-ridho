@@ -10,25 +10,40 @@ interface Ucapan {
   guestRemark: string;
 }
 
-function ListUcapan() {
+export const fetchData = async ():Promise<Ucapan[] | null> => {
+  const db = getDatabase(app);
+  const dbRef = ref(db, "ucapan");
+  const snapshot = await get(dbRef);
+  if (snapshot.exists()) {
+    return Object.values(snapshot.val());
+  } else {
+    return null;
+  }
+}
 
-  let [fruitArray, setFruitArray] = useState<Ucapan[]>([]);
+function ListUcapan({ refreshData }: { refreshData: boolean }) {
+
+  const [fruitArray, setFruitArray] = useState<Ucapan[]>([]);
   const [visible, setVisible] = useState(false);
 
-  const fetchData = async () => {
-    const db = getDatabase(app);
-    const dbRef = ref(db, "ucapan");
-    const snapshot = await get(dbRef);
-    if(snapshot.exists()) {
-      setFruitArray(Object.values(snapshot.val()));
-    } else {
-      setVisible(true);
-    }
-  }
+  
 
   useEffect(() => {
-    fetchData();
-  }, []);
+    const loadData = async () => {
+      try {
+        const data = await fetchData();
+        if (data) {
+          setFruitArray(data);
+        } else {
+          setVisible(true);
+        }
+      } catch (error) {
+        setVisible(true);
+      }
+    };
+
+    loadData();
+  }, [refreshData]);
 
   return (
     <div className={classNames.listUcapan}>
