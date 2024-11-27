@@ -23,7 +23,7 @@ const RSVPSlider: FC<Props> = (props) => {
     <div className={classNames.main}>
       <img className={classNames.bgImg} src={bgImg} />
       {props.inView && (
-        <div ref={props.contentRef} onClick={props.onInsideClick} className={classNames.content}>
+        <div className={classNames.content}>
           <motion.p
             initial={{ y: -50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -38,7 +38,9 @@ const RSVPSlider: FC<Props> = (props) => {
             transition={{ bounce: 0, duration: 2, ease: "easeInOut" }}
             className={classNames.content}
           >
-              <ListUcapan refreshData={refreshData}/>
+              <div ref={props.contentRef} onClick={props.onInsideClick}>
+                <ListUcapan refreshData={refreshData}/>
+              </div>  
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 100 }}
