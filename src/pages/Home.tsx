@@ -1,7 +1,7 @@
 import classNames from "../styles.module.scss";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Navigation from "../components/navigation";
 import clsx from "clsx";
@@ -64,6 +64,43 @@ export default function  Home() {
     }
   }, []);
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      const currentLabel = config[garis][currentSlide]?.label;
+      if (currentLabel === "RSVP") {
+        setDragEnabled(false);
+      } else {
+        setDragEnabled(true);
+      }
+    }, 1000);
+  
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [currentSlide, garis]);
+
+  const contentRef = useRef<HTMLDivElement>(null);
+
+  const handleClickOutside = (event: MouseEvent | TouchEvent) => {
+    if (contentRef.current && !contentRef.current.contains(event.target as Node)) {
+      setDragEnabled(true);
+    }
+  };
+
+  const handleInsideClick = () => {
+    setDragEnabled(false);
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("touchstart", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("touchstart", handleClickOutside);
+    };
+  }, []);
+
   return (
       <motion.div
         className={classNames.main}
@@ -104,6 +141,8 @@ export default function  Home() {
                     isOpened={isOpened}
                     onClickOpen={onClickOpen}
                     inView={currentSlide === idx}
+                    contentRef={contentRef}
+                    onInsideClick={handleInsideClick}
                   />
                 </div>
               )

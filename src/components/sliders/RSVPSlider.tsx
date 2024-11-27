@@ -7,6 +7,8 @@ import ListUcapan from "../modal-list-ucapan";
 
 interface Props {
   inView: boolean;
+  onInsideClick: () => void;
+  contentRef: React.RefObject<HTMLDivElement>;
 }
 
 const RSVPSlider: FC<Props> = (props) => {
@@ -14,14 +16,14 @@ const RSVPSlider: FC<Props> = (props) => {
   const [refreshData, setRefreshData] = useState(false);
 
   const handleDataRefresh = () => {
-    setRefreshData((prev) => !prev);  // Toggle the state to trigger reload in ListUcapan
+    setRefreshData((prev) => !prev);
   };
 
   return (
     <div className={classNames.main}>
       <img className={classNames.bgImg} src={bgImg} />
       {props.inView && (
-        <div className={classNames.content}>
+        <div ref={props.contentRef} onClick={props.onInsideClick} className={classNames.content}>
           <motion.p
             initial={{ y: -50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -36,7 +38,7 @@ const RSVPSlider: FC<Props> = (props) => {
             transition={{ bounce: 0, duration: 2, ease: "easeInOut" }}
             className={classNames.content}
           >
-            <ListUcapan refreshData={refreshData}/>
+              <ListUcapan refreshData={refreshData}/>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 100 }}

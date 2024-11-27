@@ -8,14 +8,23 @@ interface Ucapan {
   guestAttendance: string;
   guestCount: string;
   guestRemark: string;
+  timestamp: string;
 }
 
-export const fetchData = async ():Promise<Ucapan[] | null> => {
+export const fetchData = async (): Promise<Ucapan[] | null> => {
   const db = getDatabase(app);
   const dbRef = ref(db, "ucapan");
   const snapshot = await get(dbRef);
   if (snapshot.exists()) {
-    return Object.values(snapshot.val());
+    const data = Object.values(snapshot.val()) as Ucapan[];
+
+    // Sort the data by timestamp in descending order
+    const sortedData = data.sort((a: any, b: any) => {
+      // Compare timestamps (assuming timestamp is in ISO format)
+      return new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime();
+    });
+
+    return sortedData;
   } else {
     return null;
   }
@@ -25,8 +34,6 @@ function ListUcapan({ refreshData }: { refreshData: boolean }) {
 
   const [fruitArray, setFruitArray] = useState<Ucapan[]>([]);
   const [visible, setVisible] = useState(false);
-
-  
 
   useEffect(() => {
     const loadData = async () => {

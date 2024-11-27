@@ -16,6 +16,7 @@ function ModalUcapan({ onSubmit }: ModalUcapanProps) {
   let [guest, setGuest] = useState("");
   let [remark, setRemark] = useState("");
   const [open, setOpen] = useState(false);
+  const timestamp = new Date().toISOString();
 
   const validateForm = () => {
     if (name===("") || attendance===("") || remark===("")){
@@ -32,7 +33,8 @@ function ModalUcapan({ onSubmit }: ModalUcapanProps) {
       guestName: name,
       guestAttendance: attendance,
       guestCount: guest,
-      guestRemark: remark
+      guestRemark: remark,
+      timestamp: timestamp
     }).then( () => {
       alert("Terima kasih banyak atas ucapan dan doa yang telah diberikan")
       setOpen(false);
