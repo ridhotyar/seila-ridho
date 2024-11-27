@@ -67,7 +67,7 @@ export default function  Home() {
   useEffect(() => {
     const timer = setTimeout(() => {
       const currentLabel = config[garis][currentSlide]?.label;
-      if (currentLabel === "RSVP") {
+      if (currentLabel === "RSVP" || (currentLabel === "Opening") && isOpened===false) {
         setDragEnabled(false);
       } else {
         setDragEnabled(true);
