@@ -7,8 +7,8 @@ import ListUcapan from "../modal-list-ucapan";
 
 interface Props {
   inView: boolean;
-  // onInsideClick: () => void;
-  // contentRef: React.RefObject<HTMLDivElement>;
+  onInsideClick: () => void;
+  contentRef: React.RefObject<HTMLDivElement>;
 }
 
 const RSVPSlider: FC<Props> = (props) => {
@@ -38,9 +38,9 @@ const RSVPSlider: FC<Props> = (props) => {
             transition={{ bounce: 0, duration: 2, ease: "easeInOut" }}
             className={classNames.content}
           >
-              {/* <div ref={props.contentRef} onClick={props.onInsideClick}> */}
+              <div ref={props.contentRef} onClick={props.onInsideClick}>
                 <ListUcapan refreshData={refreshData}/>
-              {/* </div>   */}
+              </div>  
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 100 }}
