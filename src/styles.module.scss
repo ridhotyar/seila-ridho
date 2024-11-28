@@ -11,7 +11,7 @@
 }
 
 .loader-container {
-  height: 100vh;
+  height: 100%;
   height: calc(var(--vh, 1vh) * 100);
   max-width: 451px;
   width: 100%;
@@ -23,7 +23,7 @@
   position: fixed;
   z-index: 100;
   
-  -webkit-height: 100vh;
+  -webkit-height: 100%;
   -webkit-height: calc(var(--vh, 1vh) * 100);
   -webkit-max-width: 451px;
   -webkit-width: 100%;
@@ -46,11 +46,11 @@
 }
 
 .keen-slider-main {
-  height: 100vh;
+  height: 100%;
   height: calc(var(--vh, 1vh) * 100);
   max-width: 451px;
 
-  -webkit-height: 100vh;
+  -webkit-height: 100%;
   -webkit-height: calc(var(--vh, 1vh) * 100);
   -webkit-max-width: 451px;
 }
