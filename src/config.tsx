@@ -91,7 +91,7 @@ export const config = {
       title: "Resepsi Seila & Ridho",
       detail: "Acara Resepsi Pernikahan Seila & Ridho",
       startDate: "2024-12-28 13:00",
-      endDate: "2024-12-28 17:00",
+      endDate: "2024-12-28 16:30",
       location: "Andaliman Hall, Jl. Abdullah Lubis No.79/101, Kota Medan, Sumatera Utara 20153",
     },
   },
@@ -122,7 +122,7 @@ export const config = {
       Para tamu undangan dipersilahkan makan dan dapat berfoto bersama di
       pelaminan <br />
       <br />
-      17:00 - Acara Selesai
+      16:30 - Acara Selesai
     </>
   ),
   doa: (
