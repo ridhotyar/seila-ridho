@@ -61,6 +61,7 @@ const ModalAngpao = () => {
               <>{config.gift.bsiNo}</> <Copy className={classNames.icon}/>
             </div>
           </div>
+          <div></div>
         </div>
         <Dialog.Close asChild>
           <button className={classNames.IconButton} aria-label="Close">
