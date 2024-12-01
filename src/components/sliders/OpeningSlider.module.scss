@@ -34,14 +34,14 @@
   align-items: center;
   position: relative;
   z-index: 1;
-  color: #4f3726;
+  color: #4f3726 !important;
   
   -webkit-display: flex;
   -webkit-flex-direction: column;
   -webkit-align-items: center;
   -webkit-position: relative;
   -webkit-z-index: 1;
-  -webkit-color: #4f3726;
+  -webkit-color: #4f3726 !important;
   .title {
     font-size: 12px;
     font-weight: 400;
@@ -56,7 +56,7 @@
     font-weight: 400;
     font-size: 82px;
     font-weight: 400;
-    color: #70633a;
+    color: #70633a !important;
     line-height: 1;
     margin: 0;
     max-width: 200px;
@@ -66,7 +66,7 @@
     -webkit-font-weight: 400;
     -webkit-font-size: 82px;
     -webkit-font-weight: 400;
-    -webkit-color: #70633a;
+    -webkit-color: #70633a !important;
     -webkit-line-height: 1;
     -webkit-margin: 0;
     -webkit-max-width: 200px;
@@ -109,7 +109,7 @@
     .button {
       margin-top: 30px;
       border-radius: 15px;
-      background-color: #665a35cc;
+      background-color: #665a35cc !important;
       border: none;
       outline: none;
       color: #fff;
@@ -122,7 +122,7 @@
       
       -webkit-margin-top: 30px;
       -webkit-border-radius: 15px;
-      -webkit-background-color: #665a35cc;
+      -webkit-background-color: #665a35cc !important;
       -webkit-border: none;
       -webkit-outline: none;
       -webkit-color: #fff;
@@ -133,9 +133,9 @@
       -webkit-border: 1px solid #fff;
       -webkit-transition: all 0.2s ease-in-out;
       &:hover {
-        background-color: #665a35;
+        background-color: #665a35 !important;
         
-        -webkit-background-color: #665a35;
+        -webkit-background-color: #665a35 !important;
       }
     }
   }

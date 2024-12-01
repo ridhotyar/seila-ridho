@@ -82,7 +82,7 @@ const AkadSlider: FC<Props> = (props) => {
           >
             {dayjs(event.startDate).tz("Asia/Jakarta").format("dddd, DD MMMM YYYY")}
             <br />{" "}
-            {`Pukul ${dayjs(event.startDate).tz("Asia/Jakarta").format("HH:mm")} WIB s.d. ${dayjs(event.endDate).tz("Asia/Jakarta").format("HH:mm")} WIB`}
+            {`Pukul ${dayjs(event.startDate).tz("Asia/Jakarta").format("HH:mm")} WIB s.d. Selesai`}
             <br />
             <br /> {event.location}
           </motion.p>
