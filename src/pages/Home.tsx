@@ -50,7 +50,7 @@ export default function  Home() {
       .then(() => {
         setTimeout(() => {
           setIsLoadingAssets(false);
-        }, 1000);
+        }, 3000);
       })
       .catch((err) => {
         console.log("error", err);
@@ -117,7 +117,10 @@ export default function  Home() {
               transition={{ bounce: 0, duration: 0.5, ease: "easeInOut" }}
               className={classNames["loader-container"]}
             >
-              <div className={classNames.loader}>Loading..</div>
+              <div className={classNames.loader}>Loading...
+                <br />
+                <div style={{ fontSize: "10px", maxWidth: "200px", marginTop: "16px"}}>Disarankan untuk menggunakan Google Chrome dan janagan menggunakan mode gelap/dark mode</div>
+              </div>
             </motion.div>
           )}
         </AnimatePresence>
