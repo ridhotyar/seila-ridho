@@ -51,7 +51,7 @@ const GiftSliderIbu: FC<Props> = (props) => {
           </div>  
           <div className={classNames.card}>
             <img src={config.gift.cardImage[2]} alt="" />
-              <div className={classNames.desc} onClick={ () => {navigator.clipboard.writeText(config.gift.mandiriNo);setNumber(config.bride.woman.cardName);setCopied("copied")}}>
+              <div className={classNames.desc} onClick={ () => {navigator.clipboard.writeText(config.gift.mandiriNo);setNumber(config.gift.mandiriNo);setCopied("copied")}}>
                 <>{config.bride.woman.cardName}</>
                 <br />
                 <>{config.gift.mandiriNo}</>
