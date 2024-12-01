@@ -22,7 +22,7 @@ const GiftSlider: FC<Props> = (props) => {
             transition={{ bounce: 0, duration: 2, ease: "easeInOut" }}
             className={classNames.title}
           >
-            Kirim Hadiah utama
+            Kirim Hadiah
           </motion.p>
           <motion.div
             initial={{ y: 100, opacity: 0 }}
