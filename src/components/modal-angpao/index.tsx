@@ -45,22 +45,21 @@ const ModalAngpao = () => {
             </div>
           </div>
           <div className={classNames.card}>
-            <img src={config.gift.cardImage[0]} alt="" />
-            <div className={classNames.desc} onClick={() => handleCopy(config.gift.bcaNo)}>
+            <img src={config.gift.cardImage[3]} alt="" />
+            <div className={classNames.desc} onClick={() => handleCopy(config.gift.bcaDigitalNo)}>
               <>{config.bride.man.cardName}</>
               <br />
-              <>{config.gift.bcaNo}</> <Copy className={classNames.icon}/>
+              <>{config.gift.bcaDigitalNo}</> <Copy className={classNames.icon}/>
             </div>
-            
           </div>
-          <div className={classNames.card}>
+          {/* <div className={classNames.card}>
             <img src={config.gift.cardImage[1]} alt="" />
             <div className={classNames.desc} onClick={() => handleCopy(config.gift.bsiNo)}>
               <>{config.bride.man.cardName}</>
               <br />
               <>{config.gift.bsiNo}</> <Copy className={classNames.icon}/>
             </div>
-          </div>
+          </div> */}
           <div></div>
         </div>
         <Dialog.Close asChild>

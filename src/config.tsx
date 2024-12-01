@@ -38,6 +38,8 @@ import galery6 from "./assets/images/galery-6.jpg";
 import bankBca from "./assets/images/bankBca.png";
 import bankBsi from "./assets/images/bankBsi.png";
 import bankMandiri from "./assets/images/bankMandiri.png";
+import bankBcaDigital from "./assets/images/bankBcaDigital.png";
+
 
 export const config = {
   backgroundMusic: backgroundMusic,
@@ -147,13 +149,14 @@ export const config = {
         Namun jika Anda ingin memberikan hadiah kami sediakan nomor rekening berikut:
       </>
     ),
-    cardImage: [bankBca, bankBsi, bankMandiri],
+    cardImage: [bankBca, bankBsi, bankMandiri, bankBcaDigital],
     bsiNo : "7121417787",
     bsiNoIbu : "7129798167",
     ibuName : "NINA OCTARI",
     bapakName : "DUL KALIM",
     mandiriNoBapak : "123123123",
     bcaNo : "3630160021",
+    bcaDigitalNo : "003074891247",
     mandiriNo : "1370016160745",
     alamat : {
       reciveName: "Ridho Imantiyar",
