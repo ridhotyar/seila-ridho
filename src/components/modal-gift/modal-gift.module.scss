@@ -215,3 +215,18 @@
     -webkit-transform: translate(-50%, -50%) scale(1);
   }
 }
+
+.icon {
+  height: 12px;
+  width: 12px;
+  
+  -webkit-height: 16px;
+  -webkit-width: 16px;
+  > svg {
+    fill: #c5a983;
+    transition: all 0.3s ease-in-out;
+    
+    -webkit-fill: #c5a983;
+    -webkit-transition: all 0.3s ease-in-out;
+  }
+}

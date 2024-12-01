@@ -2,20 +2,33 @@ import * as Dialog from "@radix-ui/react-dialog";
 import XIcon from "../../assets/icons/x-icon.svg?react";
 import classNames from "./modal-angpao.module.scss";
 import { config } from "../../config";
-import { useState } from "react";
+import Copy from "../../assets/icons/copy-icon.svg?react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 
 const ModalAngpao = () => {
 
-  const [copied,setCopied] = useState("");
-  const [number,setNumber] = useState("");
+  const handleCopy = (accountNumber: string) => {
+    navigator.clipboard.writeText(accountNumber);
+
+    toast.success(`Nomor rekening berhasil disalin`, {
+      position: "top-center",
+      autoClose: 3000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+    });
+  };
 
   return (
   <Dialog.Root>
     <Dialog.Trigger asChild>
-      <button className={classNames.button} onClick={ () => {setCopied("")}}>Kirim Angpao</button>
+      <button className={classNames.button}>Kirim Angpao</button>
     </Dialog.Trigger>
     <Dialog.Portal>
+      <ToastContainer />
       <Dialog.Overlay className={classNames.DialogOverlay} />
       <Dialog.Content className={classNames.DialogContent}>
         <Dialog.Title className={classNames.DialogTitle}>
@@ -25,33 +38,32 @@ const ModalAngpao = () => {
         <div className={classNames.content}>
           <div className={classNames.card}>
             <img src={config.gift.cardImage[2]} alt="" />
-            <div className={classNames.desc} onClick={ () => {navigator.clipboard.writeText(config.gift.mandiriNo);setNumber(config.gift.mandiriNo);setCopied("copied")}}>
+            <div className={classNames.desc} onClick={() => handleCopy(config.gift.mandiriNo)}>
               <>{config.bride.woman.cardName}</>
               <br />
-              <>{config.gift.mandiriNo}</>
+              <>{config.gift.mandiriNo}</> <Copy className={classNames.icon}/>
             </div>
           </div>
           <div className={classNames.card}>
             <img src={config.gift.cardImage[0]} alt="" />
-            <div className={classNames.desc} onClick={ () => {navigator.clipboard.writeText(config.gift.bcaNo);setNumber(config.gift.bcaNo);setCopied("copied")}}>
+            <div className={classNames.desc} onClick={() => handleCopy(config.gift.bcaNo)}>
               <>{config.bride.man.cardName}</>
               <br />
-              <>{config.gift.bcaNo}</>
+              <>{config.gift.bcaNo}</> <Copy className={classNames.icon}/>
             </div>
             
           </div>
           <div className={classNames.card}>
             <img src={config.gift.cardImage[1]} alt="" />
-            <div className={classNames.desc} onClick={ () => {navigator.clipboard.writeText(config.gift.bsiNo);setNumber(config.gift.bsiNo);setCopied("copied")}}>
+            <div className={classNames.desc} onClick={() => handleCopy(config.gift.bsiNo)}>
               <>{config.bride.man.cardName}</>
               <br />
-              <>{config.gift.bsiNo}</>
+              <>{config.gift.bsiNo}</> <Copy className={classNames.icon}/>
             </div>
           </div>
-          <div className={classNames.note}>{ copied==='copied' ? `Number Copied :  ${number}  ✅` : `*Tap nama atau nomor untuk copy`}</div>
         </div>
         <Dialog.Close asChild>
-          <button className={classNames.IconButton} aria-label="Close" onClick={ () => {setCopied("")}}>
+          <button className={classNames.IconButton} aria-label="Close">
             <XIcon />
           </button>
         </Dialog.Close>
