@@ -74,7 +74,9 @@ const OpeningSlider: FC<Props> = (props) => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ bounce: 0, duration: 1, ease: "easeInOut" }}
           >
-            <p>KEPADA YTH.</p>
+            <p>Kepada Yth.
+              <br />Bapak/Ibu/Sahabat/Saudara/i
+            </p>
             <p>{queryParams?.name ?? "Tamu Undangan"}</p>
             <AnimatePresence>
               {!props.isOpened && (
