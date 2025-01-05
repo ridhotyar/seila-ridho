@@ -161,7 +161,7 @@ export const config = {
     alamat : {
       reciveName: "Ridho Imantiyar",
       reciveNumber: "085157704756",
-      reciveAddress: "Rosana Fried Chcicken, Jl. Kp. Malang Tengah I 5a, Wonorejo, Kec. Tegalsari, Surabaya, Jawa Timur 60263",
+      reciveAddress: "Jl. Petemon Sidomulyo 3A No.19, Petemon, Kec. Sawahan, Surabaya, Jawa Timur 60252",
     }
   },
   thankYou: {
